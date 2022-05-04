@@ -36,4 +36,9 @@ public class TestReturnNthString {
     public void testReturnStringGivenNIsNegative(){
         assertEquals(returnNthString.returnString(word,-1), " ");
     }
+
+    @Test
+    public void strangeNumberCharactersReturn(){
+        assertEquals(returnNthString.returnString("!tCL1Nical",1), "!CL1N");
+    }
 }

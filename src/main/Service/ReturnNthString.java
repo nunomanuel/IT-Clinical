@@ -18,6 +18,9 @@ public class ReturnNthString {
             if (Character.isUpperCase(nthSaved.charAt(0)) && counter == n) {
                 nthFinal += nthSaved;
             }
+            if(!Character.isUpperCase(nthSaved.charAt(0)) && !Character.isLowerCase(nthSaved.charAt(0))) {
+                nthFinal += nthSaved;
+            }
         }
         return nthFinal;
     }
