@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 public class TestReturnNthString {
 
-    ReturnNthString returnNthString;
+    private ReturnNthString returnNthString;
+    private String word = "ITCLiNicAl";
 
     @Before
     public void TestReturnNthString(){
@@ -13,28 +14,26 @@ public class TestReturnNthString {
 
     @Test
     public void testReturnStringGivenN1(){
-        assertEquals(returnNthString.returnString("ITCLiNiCal",1), "ITCLNA");
+        assertEquals(returnNthString.returnString(word,1), "ITCLNA");
     }
 
     @Test
     public void testReturnStringGivenN2(){
-        assertEquals(returnNthString.returnString("ITCLiNiCal",2), "TLN");
+        assertEquals(returnNthString.returnString(word,2), "TLN");
     }
 
     @Test
     public void testReturnStringGivenN3(){
-        assertEquals(returnNthString.returnString("ITCLiNiCal",3), "CNA");
+        assertEquals(returnNthString.returnString(word,3), "CNA");
     }
 
     @Test
     public void testReturnStringGivenNBiggerThanWordLength(){
-        assertEquals(returnNthString.returnString("ITCLiNiCal",100), " ");
+        assertEquals(returnNthString.returnString(word,100), " ");
     }
 
     @Test
     public void testReturnStringGivenNIsNegative(){
-        assertEquals(returnNthString.returnString("ITCLiNiCal",-1), " ");
+        assertEquals(returnNthString.returnString(word,-1), " ");
     }
-
-
 }
