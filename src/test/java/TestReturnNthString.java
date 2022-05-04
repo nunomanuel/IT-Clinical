@@ -41,4 +41,10 @@ public class TestReturnNthString {
     public void strangeNumberCharactersReturn(){
         assertEquals(returnNthString.returnString("!tCL1Nical",1), "!CL1N");
     }
+
+    @Test
+    public void countReturnCharacter(){
+        assertEquals(returnNthString.countCharacter("ItCLINiCAL",1),"ICLINCAL" + "\n" + "\n" + "I = 2" + "\n"
+                + "C = 2" + "\n" + "L = 2" + "\n" + "N = 1" + "\n" + "A = 1" );
+    }
 }

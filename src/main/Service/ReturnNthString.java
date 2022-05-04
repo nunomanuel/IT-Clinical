@@ -24,4 +24,27 @@ public class ReturnNthString {
         }
         return nthFinal;
     }
+
+    public String countCharacter(String nthFinal,int n) {
+        String charReturnNth = returnString(nthFinal,n);
+
+        String countChar = "";
+        String charFinal = "";
+        String[] countSplit = charReturnNth.split("(?!^)");
+
+
+        for (String s : countSplit) {
+            countChar = s;
+            int counter = 0;
+            for (String value : countSplit) {
+                if (countChar.equals(value)) {
+                    counter++;
+                }
+            }
+            if (!charFinal.contains(s)) {
+                charFinal += "\n" + s + " " + "=" + " " + counter;
+            }
+        }
+        return charReturnNth + "\n" + charFinal;
+    }
 }
